@@ -14,7 +14,7 @@ services:
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
       - SECRET_KEY=${SECRET_KEY}
-      - ALLOWERD_HOSTS=${ALLOWERD_HOSTS}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
     depends_on:
       - db
 

@@ -26,7 +26,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
         pass
 
 
-@api_view(['POST','GET'])
+@api_view(['GET'])
 @permission_classes([IsAuthenticated])
 @authentication_classes([BasicAuthentication])
 def sign_up_borrower(request):
@@ -34,7 +34,7 @@ def sign_up_borrower(request):
     models.Borrower.objects.get_or_create(user=request.user)
     return Response({'Message':'You signed up as borrower, thanks!'})
 
-@api_view(['POST','GET'])
+@api_view(['POST'])
 @permission_classes([IsAuthenticated])
 @authentication_classes([BasicAuthentication])
 def sign_up_investor(request):
